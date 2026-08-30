@@ -52,6 +52,29 @@ import { SITE_TITLE, SITE_DESCRIPTION, EVENT_DATA } from '../consts';
 					19 DE JUNY DEL 2027
 				</h2>
 
+				<!-- Text Invitació / Una celebració de vida -->
+				<div class="max-w-2xl mx-auto mb-10 text-center space-y-4 px-2">
+					<h3 class="text-xl sm:text-2xl font-black font-heading text-slate-900">
+						Una celebració de vida
+					</h3>
+
+					<p class="text-lg sm:text-xl font-bold text-amber-600 font-heading italic">
+						"No em caso, però no cada dia es fan 40 anys..."
+					</p>
+
+					<p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+						I al final, en aquesta vida que hi som de pas, cal celebrar-la constantment i un <strong class="text-slate-900 font-bold">Vörabosc</strong> és la millor ocasió.
+					</p>
+
+					<p class="text-amber-700 font-bold text-sm sm:text-base">
+						Si reps aquesta invitació és perquè formes part de la gent que estimo.
+					</p>
+
+					<p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+						Hem preparat una jornada completa amb vermut, arrossada, música en directe, berenar amb la mítica coca del mossèn, bufada d'espelmes i foodtrucks per aguantar ballant fins a mitjanit.
+					</p>
+				</div>
+
 				<!-- Location & Hours Quick Pill -->
 				<div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-bold text-slate-600 mb-12">
 					<span class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-xs">
@@ -70,7 +93,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, EVENT_DATA } from '../consts';
 					<Countdown client:load targetDate={EVENT_DATA.isoDateStart} />
 				</div>
 
-				<!-- Action Buttons (Calendar & Share) -->
+				<!-- Action Buttons (Tickets & Calendar) -->
 				<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 					<AddToCalendar
 						client:load
@@ -81,61 +104,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, EVENT_DATA } from '../consts';
 					/>
 				</div>
 
-			</section>
-
-
-			<!-- THE INVITATION & EMOTIONAL LETTER -->
-			<section id="informacio" class="py-12 sm:py-16">
-				<div class="max-w-3xl mx-auto">
-					<div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden text-center sm:text-left shadow-lg">
-						
-						<div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 mx-auto sm:mx-0 shadow-xs">
-							💌
-						</div>
-
-						<h2 class="text-2xl sm:text-4xl font-black font-heading text-slate-900 mb-6">
-							Una celebració de vida
-						</h2>
-
-						<div class="space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
-							<p class="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
-								"No em caso, però no cada dia es fan 40 anys..."
-							</p>
-							
-							<p>
-								I al final, en aquesta vida que hi som de pas, cal celebrar-la constantment i un <strong class="text-slate-900 font-bold">Vörabosc</strong> és la millor ocasió.
-							</p>
-
-							<p class="text-amber-700 font-bold">
-								Si reps aquesta invitació és perquè formes part de la gent que estimo.
-							</p>
-
-							<p class="text-slate-500 text-sm sm:text-base pt-2">
-								Hem preparat una jornada completa amb vermut, arrossada, música en directe, berenar amb la mítica coca del mossèn, bufada d'espelmes i foodtrucks per aguantar ballant fins a mitjanit.
-							</p>
-						</div>
-
-						<!-- Highlights Summary Cards -->
-						<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-slate-100">
-							<div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
-								<span class="text-2xl block mb-1">📅</span>
-								<span class="text-xs uppercase tracking-wider text-slate-400 font-bold block">Data</span>
-								<span class="text-sm font-extrabold text-slate-900">19 Juny 2027</span>
-							</div>
-							<div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
-								<span class="text-2xl block mb-1">📍</span>
-								<span class="text-xs uppercase tracking-wider text-slate-400 font-bold block">Lloc</span>
-								<span class="text-sm font-extrabold text-slate-900">La Pèrgola (Vic)</span>
-							</div>
-							<div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
-								<span class="text-2xl block mb-1">⏰</span>
-								<span class="text-xs uppercase tracking-wider text-slate-400 font-bold block">Horari</span>
-								<span class="text-sm font-extrabold text-slate-900">13:00 a 00:00 h</span>
-							</div>
-						</div>
-
-					</div>
-				</div>
 			</section>
 
 
