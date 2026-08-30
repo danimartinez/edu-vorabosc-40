@@ -2,65 +2,30 @@
 import { EVENT_DATA } from '../consts';
 ---
 
-<header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/85 border-b border-slate-200/80 transition-all duration-300 shadow-sm">
-	<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
-		
-		<!-- Brand Logo -->
-		<a href="/edu-40" class="flex items-center gap-3 group">
-			<img
-				src="/logo/vorabosc-o-symbol.jpg"
-				alt="Vörabosc Icon"
-				class="w-10 h-10 rounded-xl object-contain shadow-sm group-hover:scale-105 transition-transform bg-white border border-slate-200"
-			/>
-			<div class="flex flex-col">
-				<span class="text-lg sm:text-xl font-black font-heading tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors">
-					VÖRABOSC <span class="text-amber-500 font-extrabold">4.0</span>
-				</span>
-				<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 -mt-1">
-					Els 40 de l'Edu
-				</span>
-			</div>
-		</a>
-
-		<!-- Navigation Links -->
-		<div class="hidden md:flex items-center gap-1 lg:gap-1.5">
-			<a href="/edu-40#inici" class="px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all">
+<header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/85 border-b border-slate-200/80 transition-all duration-300 shadow-xs">
+	<nav class="max-w-4xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-center">
+		<!-- Centered Navigation Links -->
+		<div class="flex items-center justify-center gap-1 sm:gap-2 flex-wrap">
+			<a href="/edu-40#inici" class="px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-slate-700 hover:text-sky-700 hover:bg-slate-100 transition-all">
 				Inici
 			</a>
-			<a href="/edu-40#informacio" class="px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all">
-				La Invitació
+			<span class="text-slate-300 text-xs hidden sm:inline">•</span>
+			<a href="/edu-40#cartell" class="px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-slate-700 hover:text-sky-700 hover:bg-slate-100 transition-all">
+				Música
 			</a>
-			<a href="/edu-40#historia" class="px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all">
+			<span class="text-slate-300 text-xs hidden sm:inline">•</span>
+			<a href="/edu-40#programa" class="px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-slate-700 hover:text-sky-700 hover:bg-slate-100 transition-all">
+				Gastronomia
+			</a>
+			<span class="text-slate-300 text-xs hidden sm:inline">•</span>
+			<a href="/edu-40#historia" class="px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-slate-700 hover:text-sky-700 hover:bg-slate-100 transition-all">
 				Història
 			</a>
-			<a href="/edu-40#cartell" class="px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all">
-				Cartell
-			</a>
-			<a href="/edu-40#programa" class="px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all">
-				Menú & Horaris
-			</a>
-			<a href="/edu-40#ubicacio-allotjament" class="px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all">
-				Ubicació & Hotel
+			<span class="text-slate-300 text-xs hidden sm:inline">•</span>
+			<a href="/edu-40#ubicacio-allotjament" class="px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold text-slate-700 hover:text-sky-700 hover:bg-slate-100 transition-all">
+				Ubicació
 			</a>
 		</div>
-
-		<!-- Action Button / Date Badge -->
-		<div class="flex items-center gap-3">
-			<a
-				href="/edu-40#inici"
-				class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-amber-500/10 border border-amber-500/30 text-amber-700 hover:bg-amber-500/20 transition-all"
-			>
-				<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-				<span>19 · JUNY · 2027</span>
-			</a>
-			<a
-				href="/edu-40#inici"
-				class="inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-extrabold bg-gradient-to-r from-amber-400 via-amber-500 to-sky-500 text-slate-950 hover:brightness-105 shadow-md transition-all cursor-pointer"
-			>
-				Save the Date
-			</a>
-		</div>
-
 	</nav>
 </header>
 
