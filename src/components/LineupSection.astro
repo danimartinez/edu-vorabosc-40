@@ -35,10 +35,10 @@ const artists: Artist[] = [
 			</p>
 		</div>
 
-		<!-- Festival Poster Grid -->
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+		<!-- Festival Poster Grid (Centered Rows) -->
+		<div class="flex flex-wrap justify-center gap-4 sm:gap-6">
 			{artists.map((artist) => (
-				<div class="glass-card glass-card-hover rounded-3xl p-4 sm:p-5 relative overflow-hidden group flex flex-col justify-between">
+				<div class="glass-card glass-card-hover rounded-3xl p-4 sm:p-5 relative overflow-hidden group flex flex-col justify-between w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
 					
 					<!-- Artist Image Container -->
 					<div class="w-full aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-slate-100 to-slate-200/80 border border-slate-200/80 relative flex items-center justify-center">
