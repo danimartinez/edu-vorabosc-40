@@ -1,0 +1,162 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Countdown from '../components/Countdown';
+import AddToCalendar from '../components/AddToCalendar';
+import LineupSection from '../components/LineupSection.astro';
+import ScheduleSection from '../components/ScheduleSection.astro';
+import LocationStay from '../components/LocationStay.astro';
+import LegacySection from '../components/LegacySection.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, EVENT_DATA } from '../consts';
+---
+
+<!doctype html>
+<html lang="ca" class="scroll-smooth">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="bg-[#08090d] text-slate-100 selection:bg-orange-500 selection:text-white">
+		<Header />
+
+		<main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+			
+			<!-- HERO SECTION -->
+			<section id="inici" class="pt-6 sm:pt-12 pb-16 sm:pb-24 text-center relative">
+				
+				<!-- Ambient background glow behind Hero -->
+				<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-72 sm:w-[520px] h-72 sm:h-[420px] bg-gradient-to-tr from-orange-500/25 via-amber-500/20 to-rose-600/15 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+				<!-- Festival Badge Logo Banner -->
+				<div class="max-w-md sm:max-w-lg mx-auto mb-8 relative group">
+					<div class="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-400 to-sky-400 rounded-3xl blur-md opacity-30 group-hover:opacity-60 transition duration-500"></div>
+					<div class="relative rounded-3xl overflow-hidden glass-card border border-white/20 p-2 sm:p-3 shadow-2xl bg-white/5">
+						<img
+							src="/logo/vorabosc-banner.jpg"
+							alt="Vörabosc Logotip Oficial"
+							class="w-full h-auto rounded-2xl object-cover"
+						/>
+					</div>
+				</div>
+
+				<!-- Edition 4.0 Pill -->
+				<div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/10 border border-white/15 backdrop-blur-md mb-6 shadow-sm">
+					<span class="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse"></span>
+					<span class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-orange-300">
+						Edició 4.0 · 40è Aniversari de l'Edu
+					</span>
+				</div>
+
+				<!-- Date Display -->
+				<h2 class="text-2xl sm:text-4xl md:text-5xl font-black text-white font-heading tracking-tight mb-6">
+					19 DE JUNY DEL 2027
+				</h2>
+
+				<!-- Location & Hours Quick Pill -->
+				<div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-300 mb-12">
+					<span class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10">
+						📍 La Pèrgola (Carpes Vig Estiu, Vic)
+					</span>
+					<span class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10">
+						⏰ 13:00 h a les 00:00 h
+					</span>
+					<span class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10">
+						🎉 11 Hores de Festa Non-Stop
+					</span>
+				</div>
+
+				<!-- Live Countdown Component -->
+				<div class="mb-12">
+					<Countdown client:load targetDate={EVENT_DATA.isoDateStart} />
+				</div>
+
+				<!-- Action Buttons (Calendar & Share) -->
+				<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+					<AddToCalendar
+						client:load
+						title={EVENT_DATA.title}
+						startDate={EVENT_DATA.isoDateStart}
+						endDate={EVENT_DATA.isoDateEnd}
+						location={EVENT_DATA.locationName + ', ' + EVENT_DATA.locationAddress}
+					/>
+				</div>
+
+			</section>
+
+
+			<!-- THE INVITATION & EMOTIONAL LETTER -->
+			<section id="informacio" class="py-12 sm:py-16">
+				<div class="max-w-3xl mx-auto">
+					<div class="glass-card gradient-border-sunset rounded-3xl p-8 sm:p-12 relative overflow-hidden text-center sm:text-left">
+						
+						<div class="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mb-6 mx-auto sm:mx-0">
+							💌
+						</div>
+
+						<h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-white mb-6">
+							Una celebració de vida
+						</h2>
+
+						<div class="space-y-4 text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+							<p class="text-xl sm:text-2xl font-semibold text-amber-300/95 font-heading">
+								"No em caso, però no cada dia es fan 40 anys..."
+							</p>
+							
+							<p>
+								I al final, en aquesta vida que hi som de pas, cal celebrar-la constantment i un <strong class="text-white font-bold">Vörabosc</strong> és la millor ocasió.
+							</p>
+
+							<p class="text-orange-300 font-medium">
+								Si reps aquesta invitació és perquè formes part de la gent que estimo.
+							</p>
+
+							<p class="text-slate-400 text-sm sm:text-base pt-2">
+								Hem preparat una jornada completa amb vermut, arrossada, música en directe, berenar amb la mítica coca del mossèn, bufada d'espelmes i foodtrucks per aguantar ballant fins a mitjanit.
+							</p>
+						</div>
+
+						<!-- Highlights Summary Cards -->
+						<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/10">
+							<div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+								<span class="text-2xl block mb-1">📅</span>
+								<span class="text-xs uppercase tracking-wider text-slate-400 font-bold block">Data</span>
+								<span class="text-sm font-extrabold text-white">19 Juny 2027</span>
+							</div>
+							<div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+								<span class="text-2xl block mb-1">📍</span>
+								<span class="text-xs uppercase tracking-wider text-slate-400 font-bold block">Lloc</span>
+								<span class="text-sm font-extrabold text-white">La Pèrgola (Vic)</span>
+							</div>
+							<div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+								<span class="text-2xl block mb-1">⏰</span>
+								<span class="text-xs uppercase tracking-wider text-slate-400 font-bold block">Horari</span>
+								<span class="text-sm font-extrabold text-white">13:00 a 00:00 h</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+			<!-- LEGACY & NOSTALGIA -->
+			<LegacySection />
+
+
+			<!-- FESTIVAL LINEUP (CARTELL MUSICAL) -->
+			<LineupSection />
+
+
+			<!-- GASTRONOMY & SCHEDULE (MENÚ & HORARIS) -->
+			<ScheduleSection />
+
+
+			<!-- LOCATION & ACCOMMODATION (UBICACIÓ & ALLOTJAMENT) -->
+			<LocationStay />
+
+		</main>
+
+		<Footer />
+	</body>
+</html>
+

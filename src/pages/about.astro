@@ -1,62 +1,67 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="ca" class="scroll-smooth">
+	<head>
+		<BaseHead title={`La Història del Vörabosc | ${SITE_TITLE}`} description="Què és el Vörabosc i per què celebrem els 40 anys de l'Edu." />
+	</head>
+	<body class="bg-[#08090d] text-slate-100 selection:bg-orange-500 selection:text-white">
+		<Header />
+		
+		<main class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+			<div class="glass-card rounded-3xl p-8 sm:p-14 border border-white/10 relative overflow-hidden">
+				
+				<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-widest mb-6">
+					<span>🌲 Sobre el Vörabosc</span>
+				</div>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+				<h1 class="text-3xl sm:text-5xl font-black font-heading text-white mb-6">
+					Què és el <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Vörabosc</span>?
+				</h1>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+				<div class="space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed">
+					<p class="text-xl sm:text-2xl font-semibold text-white font-heading">
+						Una tradició de festa, amistat i bona música.
+					</p>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+					<p>
+						El <strong>Vörabosc</strong> va néixer com una trobada entre amics per compartir bons moments, bona taula i música autèntica. Amb els anys, cada edició ha anat sumant records inoblidables.
+					</p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+					<p>
+						L'edició <strong class="text-orange-400">4.0</strong> no és una edició qualsevol: és el moment de commemorar el canvi de dècada i celebrar els <strong>40 anys de l'Edu</strong> amb tota la gent que fa especial aquest camí.
+					</p>
+
+					<div class="p-6 rounded-2xl bg-white/5 border border-white/10 my-8">
+						<blockquote class="text-amber-300 font-semibold text-lg italic">
+							"No em caso, però no cada dia es fan 40 anys, i al final, en aquesta vida que hi som de pas, cal celebrar-la constantment i un Vörabosc és la millor ocasió."
+						</blockquote>
+						<p class="text-right text-xs uppercase tracking-widest text-slate-400 font-bold mt-3">— Edu</p>
+					</div>
+
+					<p>
+						El <strong>19 de Juny de 2027</strong> a La Pèrgola (Carpes Vig Estiu, Vic) tornarem a ajuntar amics, vermut, paella, berenar amb coca del mossèn, concerts en directe, sessions de DJ i foodtrucks sota les estrelles.
+					</p>
+				</div>
+
+				<div class="mt-10 pt-8 border-t border-white/10 flex flex-wrap gap-4">
+					<a
+						href="/"
+						class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-extrabold text-sm hover:brightness-110 transition-all shadow-md"
+					>
+						<span>← Tornar a la pàgina principal</span>
+					</a>
+				</div>
+
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+

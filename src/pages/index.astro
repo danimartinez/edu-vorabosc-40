@@ -1,50 +1,89 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ca" class="h-full">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title="Vörabosc | Coming Soon"
+			description="Vörabosc — Pròximament. Música, gastronomia, amics i natura."
+		/>
 	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+	<body class="h-full bg-[#08090d] text-slate-100 selection:bg-orange-500 selection:text-white flex flex-col justify-between overflow-x-hidden relative">
+		
+		<!-- Ambient Glows -->
+		<div class="fixed top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[600px] h-96 sm:h-[600px] bg-gradient-to-tr from-orange-500/20 via-amber-500/15 to-sky-500/15 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+		<!-- Minimal Top Bar -->
+		<header class="w-full max-w-5xl mx-auto px-6 py-8 flex items-center justify-between z-10">
+			<div class="flex items-center gap-3">
+				<img
+					src="/logo/vorabosc-o-symbol.jpg"
+					alt="Vörabosc Icon"
+					class="w-9 h-9 rounded-xl object-contain shadow-md border border-white/10 bg-white/5"
+				/>
+				<span class="font-extrabold font-heading text-lg tracking-tight text-white">
+					VÖRABOSC
+				</span>
+			</div>
+			
+			<div class="flex items-center gap-2">
+				<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+				<span class="text-xs font-bold uppercase tracking-widest text-slate-400">
+					2027
+				</span>
+			</div>
+		</header>
+
+		<!-- Main Hero Coming Soon -->
+		<main class="w-full max-w-2xl mx-auto px-6 py-12 text-center flex flex-col items-center justify-center my-auto z-10">
+			
+			<!-- Official Framed Logo Artwork -->
+			<div class="max-w-sm sm:max-w-md w-full mb-8 relative group">
+				<div class="absolute -inset-1.5 bg-gradient-to-r from-orange-500 via-amber-400 to-sky-400 rounded-3xl blur-lg opacity-35 group-hover:opacity-65 transition duration-700"></div>
+				<div class="relative rounded-3xl overflow-hidden glass-card border border-white/20 p-3 sm:p-4 shadow-2xl bg-white/5 backdrop-blur-xl">
+					<img
+						src="/logo/vorabosc-banner.jpg"
+						alt="Vörabosc"
+						class="w-full h-auto rounded-2xl object-cover"
+					/>
+				</div>
+			</div>
+
+			<!-- Coming Soon Badge -->
+			<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 text-xs font-bold uppercase tracking-widest mb-4">
+				<span>⚡ Pròximament · Coming Soon</span>
+			</div>
+
+			<!-- Headline -->
+			<h1 class="text-3xl sm:text-5xl font-black font-heading tracking-tight text-white mb-4">
+				Alguna cosa gran s'està cuinant
+			</h1>
+
+			<!-- Subtitle / Keywords -->
+			<p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-lg mb-6">
+				Música a la fresca, bona taula i retrobades inoblidables. Estem preparant la nova edició del <strong class="text-white">Vörabosc</strong>.
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+
+			<div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-400">
+				<span>Música</span>
+				<span>•</span>
+				<span>Gastronomia</span>
+				<span>•</span>
+				<span>Natura</span>
+				<span>•</span>
+				<span>Amistat</span>
+			</div>
 		</main>
-		<Footer />
+
+		<!-- Minimal Footer -->
+		<footer class="w-full max-w-5xl mx-auto px-6 py-8 text-center text-xs text-slate-500 z-10">
+			<p>© 2027 Vörabosc. Tots els drets reservats.</p>
+		</footer>
+
 	</body>
 </html>
+
+
