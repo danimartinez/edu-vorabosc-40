@@ -16,7 +16,6 @@ export default function AddToCalendar({
 	endDate = "2027-06-20T00:00:00+02:00"
 }: Props) {
 	const [isOpen, setIsOpen] = useState(false);
-	const [copied, setCopied] = useState(false);
 
 	// Google Calendar URL generator
 	const getGoogleCalendarUrl = () => {
@@ -64,25 +63,6 @@ export default function AddToCalendar({
 		document.body.removeChild(link);
 		window.URL.revokeObjectURL(url);
 		setIsOpen(false);
-	};
-
-	const copyShareLink = async () => {
-		const text = `🎉 Vörabosc 4.0 — 40è Aniversari d'Edu!\n📅 19 de Juny 2027 (13:00 - 00:00)\n📍 La Pèrgola (Carpes Vig Estiu, Vic)\n\nGuarda la data: ${window.location.href}`;
-		try {
-			if (navigator.share) {
-				await navigator.share({
-					title: "Vörabosc 4.0",
-					text: text,
-					url: window.location.href,
-				});
-			} else {
-				await navigator.clipboard.writeText(text);
-				setCopied(true);
-				setTimeout(() => setCopied(false), 2500);
-			}
-		} catch (err) {
-			console.log("Share skipped or unsupported", err);
-		}
 	};
 
 	const handleTicketsClick = (e: React.MouseEvent) => {
@@ -160,18 +140,6 @@ export default function AddToCalendar({
 						</>
 					)}
 				</div>
-
-				{/* 3rd Option: Compartir */}
-				<button
-					type="button"
-					onClick={copyShareLink}
-					className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm sm:text-base border border-slate-200 transition-all cursor-pointer shadow-xs"
-				>
-					<svg className="w-4 h-4 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-					</svg>
-					<span>{copied ? 'Enllaç Copiat! ✨' : 'Compartir'}</span>
-				</button>
 
 			</div>
 		</div>

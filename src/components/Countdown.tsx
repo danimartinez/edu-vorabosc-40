@@ -39,9 +39,9 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 
 	if (!timeLeft) {
 		return (
-			<div className="grid grid-cols-4 gap-3 sm:gap-5 max-w-2xl mx-auto animate-pulse">
+			<div className="grid grid-cols-4 gap-3 sm:gap-4 max-w-xl mx-auto animate-pulse">
 				{[...Array(4)].map((_, i) => (
-					<div key={i} className="h-24 sm:h-32 bg-slate-100 rounded-3xl border border-slate-200" />
+					<div key={i} className="h-20 sm:h-24 bg-slate-100 rounded-2xl border border-slate-200" />
 				))}
 			</div>
 		);
@@ -49,8 +49,8 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 
 	if (timeLeft.isPast) {
 		return (
-			<div className="text-center py-8 px-8 rounded-3xl bg-amber-50 border border-amber-300 max-w-xl mx-auto shadow-sm">
-				<p className="text-2xl sm:text-3xl font-black text-amber-900 font-heading">🎉 És avui! Gaudeix del Vörabosc 4.0! 🎉</p>
+			<div className="text-center py-6 px-8 rounded-2xl bg-amber-50 border border-amber-300 max-w-lg mx-auto shadow-xs">
+				<p className="text-xl sm:text-2xl font-black text-amber-900 font-heading">🎉 És avui! Gaudeix del Vörabosc 4.0! 🎉</p>
 			</div>
 		);
 	}
@@ -63,20 +63,20 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 	];
 
 	return (
-		<div className="w-full max-w-2xl sm:max-w-3xl mx-auto px-2">
-			<div className="grid grid-cols-4 gap-2.5 sm:gap-5 md:gap-6 text-center">
+		<div className="w-full max-w-xl mx-auto px-2">
+			<div className="grid grid-cols-4 gap-2.5 sm:gap-4 text-center">
 				{units.map((unit, idx) => (
 					<div
 						key={idx}
-						className="glass-card rounded-2xl sm:rounded-3xl p-3 sm:p-6 md:p-7 flex flex-col items-center justify-center relative overflow-hidden group hover:border-sky-400 hover:shadow-xl transition-all duration-300 min-h-[90px] sm:min-h-[120px] md:min-h-[140px]"
+						className="glass-card rounded-2xl p-3 sm:p-4 md:p-5 flex flex-col items-center justify-center relative overflow-hidden group hover:border-sky-400 hover:shadow-md transition-all duration-300"
 					>
 						<div className="absolute inset-0 bg-gradient-to-b from-amber-400/10 to-sky-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 						
-						<span className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-slate-900 tracking-tight leading-none">
+						<span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold font-heading text-slate-900 tracking-tight leading-none">
 							{unit.value}
 						</span>
 						
-						<span className="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-amber-600 mt-1.5 sm:mt-2.5">
+						<span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-amber-600 mt-1 sm:mt-2">
 							{unit.label}
 						</span>
 					</div>
