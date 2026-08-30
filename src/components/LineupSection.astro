@@ -2,20 +2,18 @@
 interface Artist {
 	name: string;
 	genre: string;
-	badge: string;
-	badgeType: 'blue' | 'yellow' | 'dark';
 	image?: string;
 	imagePosition?: string;
 }
 
 const artists: Artist[] = [
-	{ name: "Cat4Rabbit", genre: "Live Band / Pop-Rock", badge: "Live", badgeType: "blue" },
-	{ name: "Nitro", genre: "House", badge: "DJ", badgeType: "yellow", image: "/images/artists/nitro.webp" },
-	{ name: "Els Tets", genre: "Rumba", badge: "Live", badgeType: "blue", image: "/images/artists/els-tets.jpg", imagePosition: "object-top" },
-	{ name: "Wagens", genre: "", badge: "DJ", badgeType: "yellow", image: "/images/artists/wagens.jpg", imagePosition: "object-[center_15%]" },
-	{ name: "Lacara.b", genre: "Salsa vinils", badge: "DJ", badgeType: "yellow", image: "/images/artists/lacarab.jpg" },
-	{ name: "Vito Blasu", genre: "Ritmes & Sessions", badge: "DJ", badgeType: "yellow" },
-	{ name: "DJ Saraswati", genre: "Electroswing i Grooves Remix", badge: "DJ", badgeType: "yellow", image: "/images/artists/dj-saraswati.jpg" },
+	{ name: "Cat4Rabbit", genre: "Live Band / Pop-Rock" },
+	{ name: "Nitro", genre: "House", image: "/images/artists/nitro.webp" },
+	{ name: "Els Tets", genre: "Rumba", image: "/images/artists/els-tets.jpg", imagePosition: "object-top" },
+	{ name: "Wagens", genre: "", image: "/images/artists/wagens.jpg", imagePosition: "object-[center_15%]" },
+	{ name: "Lacara.b", genre: "Salsa vinils", image: "/images/artists/lacarab.jpg" },
+	{ name: "Vito Blasu", genre: "Ritmes & Sessions" },
+	{ name: "DJ Saraswati", genre: "Electroswing i Grooves Remix", image: "/images/artists/dj-saraswati.jpg" },
 ];
 ---
 
@@ -53,7 +51,7 @@ const artists: Artist[] = [
 						) : (
 							<div class="flex flex-col items-center justify-center text-slate-400 gap-1.5">
 								<span class="text-3xl opacity-75">
-									{artist.badgeType === 'blue' ? '🎸' : '🎧'}
+									🎧
 								</span>
 								<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
 									Foto Artista
@@ -62,34 +60,16 @@ const artists: Artist[] = [
 						)}
 					</div>
 
-					<!-- Badge & Details -->
-					<div class="flex flex-col flex-grow justify-between">
-						<!-- Left Aligned Badge -->
-						<div class="mb-2">
-							<span class={`inline-block px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider ${
-								artist.badgeType === 'blue' 
-									? 'bg-sky-50 text-sky-700 border border-sky-200' 
-									: 'bg-amber-50 text-amber-700 border border-amber-200'
-							}`}>
-								{artist.badge}
-							</span>
-						</div>
-
-						<!-- Artist Name & Genre -->
-						<div>
-							<h3 class="text-xl sm:text-2xl font-black font-heading text-slate-900 group-hover:text-sky-700 transition-colors mb-1">
-								{artist.name}
-							</h3>
-							{artist.genre ? (
-								<p class="text-xs sm:text-sm text-slate-500 font-semibold">
-									{artist.genre}
-								</p>
-							) : (
-								<p class="text-xs sm:text-sm text-slate-400 font-medium italic">
-									DJ Set
-								</p>
-							)}
-						</div>
+					<!-- Artist Name & Genre -->
+					<div class="flex flex-col flex-grow justify-end">
+						<h3 class="text-xl sm:text-2xl font-black font-heading text-slate-900 group-hover:text-sky-700 transition-colors mb-1">
+							{artist.name}
+						</h3>
+						{artist.genre && (
+							<p class="text-xs sm:text-sm text-slate-500 font-semibold">
+								{artist.genre}
+							</p>
+						)}
 					</div>
 
 				</div>
