@@ -12,8 +12,8 @@ const artists: Artist[] = [
 	{ name: "Cat4Rabbit", genre: "Live Band / Pop-Rock", badge: "Live", badgeType: "blue" },
 	{ name: "Nitro", genre: "House", badge: "DJ", badgeType: "yellow", image: "/images/artists/nitro.webp" },
 	{ name: "Els Tets", genre: "Rumba", badge: "Live", badgeType: "blue", image: "/images/artists/els-tets.jpg", imagePosition: "object-top" },
-	{ name: "Wagens", genre: "Rock & Grooves", badge: "Live", badgeType: "blue" },
-	{ name: "La Cara B", genre: "Selecció Especial & Vinils", badge: "DJ", badgeType: "yellow" },
+	{ name: "Wagens", genre: "", badge: "DJ", badgeType: "yellow", image: "/images/artists/wagens.jpg", imagePosition: "object-top" },
+	{ name: "Lacara.b", genre: "Salsa", badge: "DJ", badgeType: "yellow", image: "/images/artists/lacarab.jpg" },
 	{ name: "Vito Blasu", genre: "Ritmes & Sessions", badge: "DJ", badgeType: "yellow" },
 	{ name: "DJ Saraswati", genre: "Electroswing i Grooves Remix", badge: "DJ", badgeType: "yellow", image: "/images/artists/dj-saraswati.jpg" },
 ];
@@ -80,9 +80,15 @@ const artists: Artist[] = [
 							<h3 class="text-xl sm:text-2xl font-black font-heading text-slate-900 group-hover:text-sky-700 transition-colors mb-1">
 								{artist.name}
 							</h3>
-							<p class="text-xs sm:text-sm text-slate-500 font-semibold">
-								{artist.genre}
-							</p>
+							{artist.genre ? (
+								<p class="text-xs sm:text-sm text-slate-500 font-semibold">
+									{artist.genre}
+								</p>
+							) : (
+								<p class="text-xs sm:text-sm text-slate-400 font-medium italic">
+									DJ Set
+								</p>
+							)}
 						</div>
 					</div>
 
