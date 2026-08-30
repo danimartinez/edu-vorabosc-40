@@ -41,7 +41,7 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 		return (
 			<div className="grid grid-cols-4 gap-3 max-w-lg mx-auto animate-pulse">
 				{[...Array(4)].map((_, i) => (
-					<div key={i} className="h-20 bg-white/5 rounded-2xl border border-white/10" />
+					<div key={i} className="h-20 bg-slate-100 rounded-2xl border border-slate-200" />
 				))}
 			</div>
 		);
@@ -49,8 +49,8 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 
 	if (timeLeft.isPast) {
 		return (
-			<div className="text-center py-6 px-8 rounded-2xl bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-rose-500/20 border border-orange-500/30">
-				<p className="text-2xl font-bold text-amber-300 font-heading">🎉 És avui! Gaudeix del Vörabosc 4.0! 🎉</p>
+			<div className="text-center py-6 px-8 rounded-2xl bg-amber-50 border border-amber-300">
+				<p className="text-2xl font-bold text-amber-900 font-heading">🎉 És avui! Gaudeix del Vörabosc 4.0! 🎉</p>
 			</div>
 		);
 	}
@@ -68,13 +68,13 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 				{units.map((unit, idx) => (
 					<div
 						key={idx}
-						className="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center justify-center relative overflow-hidden group hover:border-orange-500/40 transition-colors"
+						className="glass-card rounded-2xl p-3 sm:p-5 flex flex-col items-center justify-center relative overflow-hidden group hover:border-sky-400 hover:shadow-lg transition-all"
 					>
-						<div className="absolute inset-0 bg-gradient-to-b from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-						<span className="text-2xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white tracking-tight">
+						<div className="absolute inset-0 bg-gradient-to-b from-amber-400/10 to-sky-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+						<span className="text-2xl sm:text-4xl md:text-5xl font-black font-heading text-slate-900 tracking-tight">
 							{unit.value}
 						</span>
-						<span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-orange-400/90 mt-1 sm:mt-2">
+						<span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-amber-600 mt-1 sm:mt-2">
 							{unit.label}
 						</span>
 					</div>

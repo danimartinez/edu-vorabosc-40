@@ -7,13 +7,13 @@ import { EVENT_DATA } from '../consts';
 		
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-4">
+			<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold uppercase tracking-widest mb-4">
 				<span>📍 Ubicació & Allotjament</span>
 			</div>
-			<h2 class="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight mb-4">
-				Com arribar i <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">On dormir</span>
+			<h2 class="text-3xl sm:text-5xl font-black text-slate-900 font-heading tracking-tight mb-4">
+				Com arribar i <span class="text-gradient-sun-sky">On dormir</span>
 			</h2>
-			<p class="text-slate-300 max-w-xl mx-auto text-base sm:text-lg">
+			<p class="text-slate-600 max-w-xl mx-auto text-base sm:text-lg">
 				Tot el que necessites saber per arribar a temps i gaudir de la festa sense preocupacions de tornada.
 			</p>
 		</div>
@@ -22,37 +22,37 @@ import { EVENT_DATA } from '../consts';
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 			
 			<!-- Card 1: Venue / La Pèrgola -->
-			<div class="glass-card glass-card-hover rounded-3xl p-8 border border-white/10 flex flex-col justify-between relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-36 h-36 bg-orange-500/10 rounded-full blur-2xl pointer-events-none"></div>
+			<div class="glass-card glass-card-hover rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden">
+				<div class="absolute top-0 right-0 w-36 h-36 bg-amber-400/10 rounded-full blur-2xl pointer-events-none"></div>
 
 				<div>
-					<div class="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl mb-6">
+					<div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-6 shadow-xs">
 						🎪
 					</div>
 
-					<span class="text-xs font-bold uppercase tracking-widest text-orange-400">El Lloc de la Festa</span>
-					<h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white mt-1 mb-3">
+					<span class="text-xs font-bold uppercase tracking-widest text-amber-700">El Lloc de la Festa</span>
+					<h3 class="text-2xl sm:text-3xl font-black font-heading text-slate-900 mt-1 mb-2">
 						La Pèrgola
 					</h3>
-					<p class="text-amber-300/90 font-medium text-sm mb-4">
+					<p class="text-sky-700 font-bold text-sm mb-4">
 						Carpes Vig Estiu · Vic (Barcelona)
 					</p>
 
-					<p class="text-slate-300 text-sm leading-relaxed mb-6">
-						Un espai a l'aire lliure, ampli i acollidor per passar del vermut del migdia al ball sota les estrelles. Zona amb ombra, gespa i zona chill-out.
+					<p class="text-slate-600 text-sm leading-relaxed mb-6">
+						Un espai a l'aire lliure, ampli i acollidor per passar del vermut del migdia al ball sota les estrelles. Zona amb ombra, gespa i espai chill-out.
 					</p>
 
-					<ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-8">
+					<ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-8 font-medium">
 						<li class="flex items-center gap-2">
-							<span class="text-emerald-400">✓</span>
+							<span class="text-emerald-600 font-bold">✓</span>
 							<span><strong>Horari:</strong> 13:00 h a 00:00 h</span>
 						</li>
 						<li class="flex items-center gap-2">
-							<span class="text-emerald-400">✓</span>
+							<span class="text-emerald-600 font-bold">✓</span>
 							<span><strong>Aparcament:</strong> Zona d'aparcament habilitada al recinte</span>
 						</li>
 						<li class="flex items-center gap-2">
-							<span class="text-emerald-400">✓</span>
+							<span class="text-emerald-600 font-bold">✓</span>
 							<span><strong>Dress Code:</strong> Festival estiuenc & calçat còmode per ballar</span>
 						</li>
 					</ul>
@@ -62,48 +62,48 @@ import { EVENT_DATA } from '../consts';
 					href={EVENT_DATA.mapsUrl}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-sm transition-all text-center group"
+					class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-all text-center group shadow-md"
 				>
 					<span>Obrir a Google Maps</span>
-					<svg class="w-4 h-4 text-orange-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<svg class="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
 					</svg>
 				</a>
 			</div>
 
 			<!-- Card 2: Hotel / Up Rooms Vic -->
-			<div class="glass-card glass-card-hover rounded-3xl p-8 border border-white/10 flex flex-col justify-between relative overflow-hidden">
-				<div class="absolute top-0 right-0 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+			<div class="glass-card glass-card-hover rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden">
+				<div class="absolute top-0 right-0 w-36 h-36 bg-sky-400/10 rounded-full blur-2xl pointer-events-none"></div>
 
 				<div>
-					<div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+					<div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-2xl mb-6 shadow-xs">
 						🏨
 					</div>
 
-					<span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Per a la gent de fora de Vic</span>
-					<h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white mt-1 mb-3">
+					<span class="text-xs font-bold uppercase tracking-widest text-sky-700">Per a la gent de fora de Vic</span>
+					<h3 class="text-2xl sm:text-3xl font-black font-heading text-slate-900 mt-1 mb-2">
 						Up Rooms Vic
 					</h3>
-					<p class="text-emerald-300/90 font-medium text-sm mb-4">
+					<p class="text-sky-700 font-bold text-sm mb-4">
 						Allotjament recomanat a Vic
 					</p>
 
-					<p class="text-slate-300 text-sm leading-relaxed mb-6">
+					<p class="text-slate-600 text-sm leading-relaxed mb-6">
 						Si vens de fora i vols gaudir de la festa fins al final sense haver d'agafar el cotxe de nit, et recomanem reservar habitació amb temps a l'hotel <strong>Up Rooms Vic</strong>.
 					</p>
 
-					<ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-8">
+					<ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 mb-8 font-medium">
 						<li class="flex items-center gap-2">
-							<span class="text-emerald-400">✓</span>
+							<span class="text-emerald-600 font-bold">✓</span>
 							<span>Hotel modern i cèntric a Vic</span>
 						</li>
 						<li class="flex items-center gap-2">
-							<span class="text-emerald-400">✓</span>
+							<span class="text-emerald-600 font-bold">✓</span>
 							<span>Molt bona connexió i fàcil accés</span>
 						</li>
 						<li class="flex items-center gap-2">
-							<span class="text-amber-400">⚠️</span>
-							<span class="text-amber-200">Recomanem reservar amb antelació per assegurar plaça</span>
+							<span class="text-amber-600">⚠️</span>
+							<span class="text-amber-800 font-semibold">Recomanem reservar amb antelació per assegurar plaça</span>
 						</li>
 					</ul>
 				</div>
@@ -112,10 +112,10 @@ import { EVENT_DATA } from '../consts';
 					href={EVENT_DATA.hotelUrl}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-bold text-sm transition-all text-center shadow-lg shadow-emerald-500/20 group"
+					class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-white font-bold text-sm transition-all text-center shadow-md shadow-sky-500/20 group"
 				>
 					<span>Veure i Reservar a Up Rooms Vic</span>
-					<svg class="w-4 h-4 text-slate-950 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
 					</svg>
 				</a>
@@ -124,13 +124,13 @@ import { EVENT_DATA } from '../consts';
 		</div>
 
 		<!-- FOMO Banner Reminder -->
-		<div class="mt-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-orange-500/15 via-rose-500/15 to-amber-500/15 border border-orange-500/30 text-center relative overflow-hidden">
+		<div class="mt-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-50 via-sky-50 to-amber-50 border border-amber-200 text-center relative overflow-hidden shadow-xs">
 			<div class="max-w-2xl mx-auto">
 				<span class="text-2xl mb-2 block">🔥</span>
-				<h4 class="text-xl sm:text-2xl font-extrabold font-heading text-white mb-2">
+				<h4 class="text-xl sm:text-2xl font-black font-heading text-slate-900 mb-2">
 					"Guarda la data que el FOMO et pot arribar a durar 40 anys"
 				</h4>
-				<p class="text-slate-300 text-sm sm:text-base">
+				<p class="text-slate-600 text-sm sm:text-base">
 					No cada dia es canvia de dècada. Ens veiem el 19 de Juny del 2027 a La Pèrgola!
 				</p>
 			</div>

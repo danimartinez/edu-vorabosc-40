@@ -5,21 +5,21 @@
 		--font-heading: 'Syne', sans-serif;
 		--font-body: 'Plus Jakarta Sans', sans-serif;
 		
-		--color-bg-dark: #0a0b10;
-		--color-card-bg: rgba(18, 20, 29, 0.7);
-		--color-card-border: rgba(255, 255, 255, 0.08);
+		--color-bg-light: #ffffff;
+		--color-text-main: #0f172a;
+		--color-text-muted: #64748b;
 		
-		--color-accent-sunset: #ff5e36;
-		--color-accent-amber: #f59e0b;
-		--color-accent-gold: #fbbf24;
-		--color-accent-sage: #10b981;
-		--color-accent-purple: #8b5cf6;
+		--color-brand-yellow: #f59e0b;
+		--color-brand-sun: #fbbf24;
+		--color-brand-blue: #0284c7;
+		--color-brand-sky: #38bdf8;
+		--color-brand-black: #09090b;
 	}
 
 	html {
 		scroll-behavior: smooth;
-		background-color: #08090d;
-		color: #f3f4f6;
+		background-color: #ffffff;
+		color: #0f172a;
 		font-family: var(--font-body);
 	}
 
@@ -27,14 +27,14 @@
 		margin: 0;
 		padding: 0;
 		min-height: 100vh;
-		background-color: #08090d;
+		background-color: #ffffff;
 		background-image: 
-			radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 94, 54, 0.18), transparent 70%),
-			radial-gradient(ellipse 60% 40% at 80% 40%, rgba(245, 158, 11, 0.1), transparent 60%),
-			radial-gradient(ellipse 60% 40% at 20% 80%, rgba(16, 185, 129, 0.08), transparent 60%),
-			radial-gradient(ellipse 70% 50% at 50% 120%, rgba(139, 92, 246, 0.12), transparent 70%);
+			radial-gradient(ellipse 70% 45% at 20% 0%, rgba(251, 191, 36, 0.12), transparent 70%),
+			radial-gradient(ellipse 70% 45% at 80% 10%, rgba(56, 189, 248, 0.14), transparent 70%),
+			radial-gradient(ellipse 60% 40% at 10% 60%, rgba(251, 191, 36, 0.08), transparent 60%),
+			radial-gradient(ellipse 60% 40% at 90% 80%, rgba(14, 165, 233, 0.09), transparent 60%);
 		background-attachment: fixed;
-		color: #f3f4f6;
+		color: #0f172a;
 		overflow-x: hidden;
 		-webkit-font-smoothing: antialiased;
 	}
@@ -53,57 +53,42 @@
 	font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Glassmorphism Cards */
+/* Light Glassmorphic & Modern White Cards */
 .glass-card {
-	background: rgba(18, 20, 30, 0.65);
+	background: rgba(255, 255, 255, 0.85);
 	backdrop-filter: blur(16px);
 	-webkit-backdrop-filter: blur(16px);
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(226, 232, 240, 0.9);
+	box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
 }
 
 .glass-card-hover {
 	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .glass-card-hover:hover {
-	background: rgba(24, 27, 42, 0.8);
-	border-color: rgba(255, 255, 255, 0.18);
+	background: rgba(255, 255, 255, 0.98);
+	border-color: rgba(56, 189, 248, 0.4);
 	transform: translateY(-3px);
-	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	box-shadow: 0 20px 40px -10px rgba(2, 132, 199, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
 }
 
-/* Glowing text and buttons */
-.text-glow-orange {
-	text-shadow: 0 0 30px rgba(255, 94, 54, 0.45);
+/* Brand Gradients */
+.bg-gradient-vorabosc {
+	background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 45%, #0284c7 100%);
 }
 
-.text-glow-amber {
-	text-shadow: 0 0 30px rgba(245, 158, 11, 0.45);
+.text-gradient-sun-sky {
+	background: linear-gradient(135deg, #d97706 0%, #0284c7 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-.glow-box-orange {
-	box-shadow: 0 0 35px -5px rgba(255, 94, 54, 0.4);
+.glow-sun {
+	box-shadow: 0 0 35px -5px rgba(251, 191, 36, 0.35);
 }
 
-.glow-box-amber {
-	box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.35);
-}
-
-/* Gradient borders */
-.gradient-border-sunset {
-	position: relative;
-}
-.gradient-border-sunset::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	border-radius: inherit;
-	padding: 1px;
-	background: linear-gradient(135deg, rgba(255, 94, 54, 0.6), rgba(245, 158, 11, 0.2), transparent 70%);
-	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-	-webkit-mask-composite: xor;
-	mask-composite: exclude;
-	pointer-events: none;
+.glow-sky {
+	box-shadow: 0 0 35px -5px rgba(56, 189, 248, 0.35);
 }
 
 /* Pulse animation for live badge */
@@ -115,9 +100,4 @@
 	animation: pulse-subtle 3s ease-in-out infinite;
 }
 
-/* Custom noise overlay (optional) */
-.bg-mesh-pattern {
-	background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-	background-size: 24px 24px;
-}
 

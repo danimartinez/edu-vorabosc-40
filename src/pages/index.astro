@@ -11,10 +11,10 @@ import { SITE_TITLE } from '../consts';
 			description="Vörabosc — Pròximament. Música, gastronomia, amics i natura."
 		/>
 	</head>
-	<body class="h-full bg-[#08090d] text-slate-100 selection:bg-orange-500 selection:text-white flex flex-col justify-between overflow-x-hidden relative">
+	<body class="h-full bg-white text-slate-900 selection:bg-amber-400 selection:text-slate-950 flex flex-col justify-between overflow-x-hidden relative">
 		
 		<!-- Ambient Glows -->
-		<div class="fixed top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[600px] h-96 sm:h-[600px] bg-gradient-to-tr from-orange-500/20 via-amber-500/15 to-sky-500/15 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+		<div class="fixed top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[600px] h-96 sm:h-[600px] bg-gradient-to-tr from-amber-300/20 via-sky-200/20 to-amber-200/15 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
 		<!-- Minimal Top Bar -->
 		<header class="w-full max-w-5xl mx-auto px-6 py-8 flex items-center justify-between z-10">
@@ -22,16 +22,16 @@ import { SITE_TITLE } from '../consts';
 				<img
 					src="/logo/vorabosc-o-symbol.jpg"
 					alt="Vörabosc Icon"
-					class="w-9 h-9 rounded-xl object-contain shadow-md border border-white/10 bg-white/5"
+					class="w-9 h-9 rounded-xl object-contain shadow-xs border border-slate-200 bg-white"
 				/>
-				<span class="font-extrabold font-heading text-lg tracking-tight text-white">
+				<span class="font-extrabold font-heading text-lg tracking-tight text-slate-900">
 					VÖRABOSC
 				</span>
 			</div>
 			
 			<div class="flex items-center gap-2">
-				<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-				<span class="text-xs font-bold uppercase tracking-widest text-slate-400">
+				<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+				<span class="text-xs font-bold uppercase tracking-widest text-slate-500">
 					2027
 				</span>
 			</div>
@@ -42,8 +42,8 @@ import { SITE_TITLE } from '../consts';
 			
 			<!-- Official Framed Logo Artwork -->
 			<div class="max-w-sm sm:max-w-md w-full mb-8 relative group">
-				<div class="absolute -inset-1.5 bg-gradient-to-r from-orange-500 via-amber-400 to-sky-400 rounded-3xl blur-lg opacity-35 group-hover:opacity-65 transition duration-700"></div>
-				<div class="relative rounded-3xl overflow-hidden glass-card border border-white/20 p-3 sm:p-4 shadow-2xl bg-white/5 backdrop-blur-xl">
+				<div class="absolute -inset-1.5 bg-gradient-to-r from-amber-300 via-amber-400 to-sky-300 rounded-3xl blur-lg opacity-40 group-hover:opacity-70 transition duration-700"></div>
+				<div class="relative rounded-3xl overflow-hidden glass-card border border-slate-200/80 p-3 sm:p-4 shadow-xl bg-white/90">
 					<img
 						src="/logo/vorabosc-banner.jpg"
 						alt="Vörabosc"
@@ -53,21 +53,21 @@ import { SITE_TITLE } from '../consts';
 			</div>
 
 			<!-- Coming Soon Badge -->
-			<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 text-xs font-bold uppercase tracking-widest mb-4">
+			<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-widest mb-4">
 				<span>⚡ Pròximament · Coming Soon</span>
 			</div>
 
 			<!-- Headline -->
-			<h1 class="text-3xl sm:text-5xl font-black font-heading tracking-tight text-white mb-4">
+			<h1 class="text-3xl sm:text-5xl font-black font-heading tracking-tight text-slate-900 mb-4">
 				Alguna cosa gran s'està cuinant
 			</h1>
 
 			<!-- Subtitle / Keywords -->
-			<p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-lg mb-6">
-				Música a la fresca, bona taula i retrobades inoblidables. Estem preparant la nova edició del <strong class="text-white">Vörabosc</strong>.
+			<p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-lg mb-6 font-normal">
+				Música a la fresca, bona taula i retrobades inoblidables. Estem preparant la nova edició del <strong class="text-slate-900 font-bold">Vörabosc</strong>.
 			</p>
 
-			<div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-400">
+			<div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
 				<span>Música</span>
 				<span>•</span>
 				<span>Gastronomia</span>
@@ -79,11 +79,12 @@ import { SITE_TITLE } from '../consts';
 		</main>
 
 		<!-- Minimal Footer -->
-		<footer class="w-full max-w-5xl mx-auto px-6 py-8 text-center text-xs text-slate-500 z-10">
+		<footer class="w-full max-w-5xl mx-auto px-6 py-8 text-center text-xs text-slate-400 z-10">
 			<p>© 2027 Vörabosc. Tots els drets reservats.</p>
 		</footer>
 
 	</body>
 </html>
+
 
 

@@ -2,40 +2,44 @@
 import { EVENT_DATA } from '../consts';
 ---
 
-<footer class="mt-20 border-t border-white/10 bg-[#07080b] py-14 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+<footer class="mt-20 border-t border-slate-200/80 bg-slate-50/80 py-14 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
 	<div class="max-w-4xl mx-auto flex flex-col items-center justify-center space-y-6">
 		
 		<!-- Brand & Badge -->
 		<div class="flex items-center gap-3">
-			<div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center font-black text-slate-950 text-xs font-heading">
-				4.0
-			</div>
-			<span class="text-xl font-extrabold font-heading text-white tracking-tight">
-				VÖRABOSC 4.0
+			<img
+				src="/logo/vorabosc-o-symbol.jpg"
+				alt="Vörabosc"
+				class="w-7 h-7 rounded-lg object-contain shadow-xs bg-white border border-slate-200"
+			/>
+			<span class="text-xl font-extrabold font-heading text-slate-900 tracking-tight">
+				VÖRABOSC <span class="text-amber-500">4.0</span>
 			</span>
 		</div>
 
 		<!-- Message -->
-		<p class="text-slate-400 text-sm max-w-md leading-relaxed">
+		<p class="text-slate-600 text-sm max-w-md leading-relaxed">
 			Celebrant els 40 anys de l'Edu amb la millor companyia.<br />
 			19 de Juny del 2027 · La Pèrgola (Carpes Vig Estiu, Vic).
 		</p>
 
 		<!-- Fast Links -->
-		<div class="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-400">
-			<a href="#inici" class="hover:text-white transition-colors">Inici</a>
+		<div class="flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-slate-500">
+			<a href="/edu-40#inici" class="hover:text-sky-600 transition-colors">Inici</a>
 			<span>•</span>
-			<a href="#informacio" class="hover:text-white transition-colors">Invitació</a>
+			<a href="/edu-40#informacio" class="hover:text-sky-600 transition-colors">Invitació</a>
 			<span>•</span>
-			<a href="#cartell" class="hover:text-white transition-colors">Cartell</a>
+			<a href="/edu-40#historia" class="hover:text-sky-600 transition-colors">Història</a>
 			<span>•</span>
-			<a href="#programa" class="hover:text-white transition-colors">Menú</a>
+			<a href="/edu-40#cartell" class="hover:text-sky-600 transition-colors">Cartell</a>
 			<span>•</span>
-			<a href="#ubicacio-allotjament" class="hover:text-white transition-colors">Ubicació</a>
+			<a href="/edu-40#programa" class="hover:text-sky-600 transition-colors">Menú</a>
+			<span>•</span>
+			<a href="/edu-40#ubicacio-allotjament" class="hover:text-sky-600 transition-colors">Ubicació</a>
 		</div>
 
 		<!-- Copyright / Sign-off -->
-		<div class="pt-6 border-t border-white/5 w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+		<div class="pt-6 border-t border-slate-200/60 w-full flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-2">
 			<span>© 2027 Vörabosc 4.0 — Fet amb ❤️ per als 40 de l'Edu.</span>
 			<span>#Vorabosc40 · 19.06.2027</span>
 		</div>
