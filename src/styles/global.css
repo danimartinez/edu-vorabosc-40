@@ -44,10 +44,21 @@
 		-webkit-font-smoothing: antialiased;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h3, h5, h6 {
 		font-family: var(--font-heading);
 		letter-spacing: 0.03em;
 		font-weight: 400;
+	}
+
+	h2 {
+		font-family: var(--font-heading);
+		letter-spacing: 0.03em;
+		font-weight: 700;
+	}
+
+	h4 {
+		font-family: var(--font-body);
+		letter-spacing: normal;
 	}
 }
 
