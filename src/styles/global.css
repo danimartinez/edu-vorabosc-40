@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+	--font-heading: 'Bebas Neue', sans-serif;
+	--font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
 @layer base {
 	:root {
-		--font-heading: 'Syne', sans-serif;
+		--font-heading: 'Bebas Neue', sans-serif;
 		--font-body: 'Plus Jakarta Sans', sans-serif;
 		
 		--color-bg-light: #ffffff;
@@ -41,16 +46,18 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: var(--font-heading);
-		letter-spacing: -0.02em;
+		letter-spacing: 0.03em;
+		font-weight: 400;
 	}
 }
 
 .font-heading {
-	font-family: 'Syne', sans-serif;
+	font-family: var(--font-heading);
+	letter-spacing: 0.03em;
 }
 
 .font-body {
-	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-family: var(--font-body);
 }
 
 /* Light Glassmorphic & Modern White Cards */

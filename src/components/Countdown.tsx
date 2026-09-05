@@ -50,7 +50,7 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 	if (timeLeft.isPast) {
 		return (
 			<div className="text-center py-6 px-8 rounded-2xl bg-amber-50 border border-amber-300 max-w-lg mx-auto shadow-xs">
-				<p className="text-xl sm:text-2xl font-black text-amber-900 font-heading">🎉 És avui! Gaudeix del Vörabosc 4.0! 🎉</p>
+				<p className="text-2xl sm:text-3xl text-amber-900 font-heading tracking-wide">🎉 És avui! Gaudeix del Vörabosc 4.0! 🎉</p>
 			</div>
 		);
 	}
@@ -72,7 +72,7 @@ export default function Countdown({ targetDate = '2027-06-19T13:00:00+02:00' }: 
 					>
 						<div className="absolute inset-0 bg-gradient-to-b from-amber-400/10 to-sky-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 						
-						<span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold font-heading text-slate-900 tracking-tight leading-none">
+						<span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading text-slate-900 tracking-wide leading-none">
 							{unit.value}
 						</span>
 						
